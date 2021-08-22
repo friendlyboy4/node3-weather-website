@@ -1,6 +1,6 @@
 console.log('Client side JS file is loaded')
 
-// fetch is CLIENT SIDE ONLY - server side (node) is REQUEST
+// fetch is CLIENT SIDE ONLY - server side (node) is REQUEST - GIT TEST
 
 fetch('http://127.0.0.1:3000/weather?location=perth').then((response) => {
   response.json().then((data) => {
