@@ -20,10 +20,12 @@ const messageTwo = document.querySelector('.messageTwo')
 
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault()
+
   messageOne.textContent = 'Loading forecast...'
   messageTwo.textContent = ''
+
   const location = search.value
-  fetch(`http://127.0.0.1:3000/weather?location=${location}`).then((response) => {
+  fetch(`/weather?location=${location}`).then((response) => {
     response.json().then((data) => {
       renderForecast(data)
     })
